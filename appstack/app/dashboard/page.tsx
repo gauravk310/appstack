@@ -143,17 +143,6 @@ const PlayStoreClone = () => {
     const [activeTab, setActiveTab] = useState('For you');
     const [searchQuery, setSearchQuery] = useState('');
 
-    const navItems = [
-        { icon: '🎮', label: 'Games' },
-        { icon: '📱', label: 'Apps' },
-        { icon: '🎬', label: 'Movies' },
-        { icon: '📚', label: 'Books' },
-        { icon: '👶', label: 'Kids' },
-        { icon: '🎁', label: 'Offers' },
-        { icon: '📂', label: 'Categories' },
-        { icon: '📥', label: 'My apps' },
-    ];
-
     const tabs = ['For you', 'Top charts', 'Kids', 'Events'];
 
     const filteredApps = searchQuery
