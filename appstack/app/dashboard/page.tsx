@@ -162,7 +162,7 @@ const PlayStoreClone = () => {
                         <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold">
                             ▶
                         </div>
-                        <span className="font-semibold text-xl hidden sm:block">Google Play</span>
+                        <span className="font-semibold text-xl hidden sm:block text-black">Google Play</span>
                     </div>
 
                     <div className="flex-1 max-w-2xl mx-4">
