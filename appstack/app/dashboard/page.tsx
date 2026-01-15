@@ -194,7 +194,7 @@ const PlayStoreClone = () => {
 
             <div>
                 {/* Main Content */}
-                <main className="flex-1 p-4 md:p-6 lg:p-8 max-w-[1400px]">
+                <main className="p-4 md:p-6 lg:p-8 max-w-[1400px] mx-auto">
                     {/* Tabs */}
                     <div className="flex gap-6 mb-6 border-b overflow-x-auto">
                         {tabs.map((tab) => (
