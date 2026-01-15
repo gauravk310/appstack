@@ -173,7 +173,7 @@ const PlayStoreClone = () => {
                                 placeholder="Search for apps & games"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full pl-12 pr-4 py-3 rounded-full bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                                className="w-full pl-12 pr-4 py-3 rounded-full bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-black placeholder:text-black"
                             />
                         </div>
                     </div>
