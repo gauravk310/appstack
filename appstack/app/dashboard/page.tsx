@@ -220,7 +220,7 @@ const PlayStoreClone = () => {
                                 ))}
                             </div>
                             {filteredApps.length === 0 && (
-                                <p className="text-center text-gray-500 py-12">No apps found</p>
+                                <p className="text-center text-black py-12">No apps found</p>
                             )}
                         </div>
                     ) : (
