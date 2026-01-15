@@ -63,11 +63,11 @@ const AppCard = ({ app, featured = false }: { app: App; featured?: boolean }) =>
             <div className="rounded-2xl overflow-hidden bg-gray-100 w-full aspect-square flex items-center justify-center text-5xl mb-2">
                 {app.icon}
             </div>
-            <h4 className="font-medium text-sm truncate mb-1">{app.name}</h4>
-            <p className="text-xs text-gray-600 mb-1">{app.category}</p>
+            <h4 className="font-medium text-sm truncate mb-1 text-black">{app.name}</h4>
+            <p className="text-xs text-black mb-1">{app.category}</p>
             <div className="flex items-center gap-1">
                 <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                <span className="text-xs">{app.rating}</span>
+                <span className="text-xs text-black">{app.rating}</span>
             </div>
         </div>
     );
