@@ -108,7 +108,7 @@ const HorizontalScroll = ({ children, title }: { children: React.ReactNode; titl
     return (
         <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
-                <h2 className="text-xl font-bold">{title}</h2>
+                <h2 className="text-xl font-bold text-black">{title}</h2>
                 <div className="flex gap-2">
                     {canScrollLeft && (
                         <button
