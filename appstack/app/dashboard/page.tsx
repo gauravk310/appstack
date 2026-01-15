@@ -121,7 +121,7 @@ const HorizontalScroll = ({ children, title }: { children: React.ReactNode; titl
                     {canScrollRight && (
                         <button
                             onClick={() => scroll('right')}
-                            className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-50 transition-colors"
+                            className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-50 transition-colors text-black"
                         >
                             <ChevronRight className="w-5 h-5" />
                         </button>
