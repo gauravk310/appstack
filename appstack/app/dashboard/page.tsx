@@ -157,12 +157,6 @@ const PlayStoreClone = () => {
             {/* Header */}
             <header className="sticky top-0 z-50 bg-white shadow-sm">
                 <div className="flex items-center gap-4 px-4 py-3">
-                    <button
-                        onClick={() => setSidebarOpen(!sidebarOpen)}
-                        className="lg:hidden p-2 hover:bg-gray-100 rounded-full transition-colors"
-                    >
-                        <Menu className="w-6 h-6" />
-                    </button>
 
                     <div className="flex items-center gap-2">
                         <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold">
