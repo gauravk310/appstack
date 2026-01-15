@@ -213,7 +213,7 @@ const PlayStoreClone = () => {
 
                     {searchQuery ? (
                         <div>
-                            <h2 className="text-xl font-bold mb-4">Search Results</h2>
+                            <h2 className="text-xl font-bold mb-4 text-black">Search Results</h2>
                             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                                 {filteredApps.map(app => (
                                     <AppCard key={app.id} app={app} />
