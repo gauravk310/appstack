@@ -202,8 +202,8 @@ const PlayStoreClone = () => {
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
                                 className={`pb-3 px-2 font-medium whitespace-nowrap transition-colors ${activeTab === tab
-                                    ? 'text-green-600 border-b-2 border-green-600'
-                                    : 'text-gray-600 hover:text-gray-900'
+                                    ? 'text-black border-b-2 border-black'
+                                    : 'text-black hover:text-black'
                                     }`}
                             >
                                 {tab}
