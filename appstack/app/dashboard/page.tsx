@@ -183,7 +183,7 @@ const PlayStoreClone = () => {
                             <Bell className="w-6 h-6 text-black" />
                         </button>
                         <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
-                            <Settings className="w-6 h-6 text-gray-600" />
+                            <Settings className="w-6 h-6 text-black" />
                         </button>
                         <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center text-white font-semibold cursor-pointer">
                             U
