@@ -140,7 +140,6 @@ const HorizontalScroll = ({ children, title }: { children: React.ReactNode; titl
 };
 
 const PlayStoreClone = () => {
-    const [sidebarOpen, setSidebarOpen] = useState(false);
     const [activeTab, setActiveTab] = useState('For you');
     const [searchQuery, setSearchQuery] = useState('');
 
