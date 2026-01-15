@@ -192,30 +192,7 @@ const PlayStoreClone = () => {
                 </div>
             </header>
 
-            <div className="flex">
-                {/* Sidebar */}
-                <aside className={`fixed lg:sticky top-[73px] left-0 h-[calc(100vh-73px)] w-64 bg-white border-r transform transition-transform duration-300 z-40 overflow-y-auto ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
-                    <nav className="p-4">
-                        {navItems.map((item, index) => (
-                            <button
-                                key={index}
-                                className="w-full flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-left"
-                            >
-                                <span className="text-2xl">{item.icon}</span>
-                                <span className="font-medium">{item.label}</span>
-                            </button>
-                        ))}
-                    </nav>
-                </aside>
-
-                {/* Overlay */}
-                {sidebarOpen && (
-                    <div
-                        className="fixed inset-0 bg-black/50 z-30 lg:hidden"
-                        onClick={() => setSidebarOpen(false)}
-                    />
-                )}
-
+            <div>
                 {/* Main Content */}
                 <main className="flex-1 p-4 md:p-6 lg:p-8 max-w-[1400px]">
                     {/* Tabs */}
