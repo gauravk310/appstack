@@ -180,7 +180,7 @@ const PlayStoreClone = () => {
 
                     <div className="hidden md:flex items-center gap-2">
                         <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
-                            <Bell className="w-6 h-6 text-gray-600" />
+                            <Bell className="w-6 h-6 text-black" />
                         </button>
                         <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
                             <Settings className="w-6 h-6 text-gray-600" />
