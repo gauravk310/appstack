@@ -141,7 +141,9 @@ const HorizontalScroll = ({ children, title }: { children: React.ReactNode; titl
     );
 };
 
-const PlayStoreClone = () => {
+const Dashboard = () => {
+    const { data: session, status } = useSession();
+    const router = useRouter();
     const [activeTab, setActiveTab] = useState('For you');
     const [searchQuery, setSearchQuery] = useState('');
 
