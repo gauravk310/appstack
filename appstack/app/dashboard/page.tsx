@@ -146,6 +146,13 @@ const Dashboard = () => {
     const router = useRouter();
     const [activeTab, setActiveTab] = useState('For you');
     const [searchQuery, setSearchQuery] = useState('');
+    const [showUserMenu, setShowUserMenu] = useState(false);
+
+    useEffect(() => {
+        if (status === 'unauthenticated') {
+            router.push('/login');
+        }
+    }, [status, router]);
 
     const tabs = ['For you', 'Top charts', 'Kids', 'Events'];
 
