@@ -253,6 +253,14 @@ const Dashboard = () => {
             <div>
                 {/* Main Content */}
                 <main className="p-4 md:p-6 lg:p-8 max-w-[1400px] mx-auto">
+                    {/* Welcome Banner */}
+                    <div className="mb-8 p-6 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl text-white">
+                        <h1 className="text-2xl font-bold mb-2">
+                            Welcome back, {session?.user?.name?.split(' ')[0]}! 👋
+                        </h1>
+                        <p className="opacity-90">Discover your next favorite app today</p>
+                    </div>
+
                     {/* Tabs */}
                     <div className="flex gap-6 mb-6 border-b overflow-x-auto">
                         {tabs.map((tab) => (
