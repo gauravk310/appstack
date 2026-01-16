@@ -1,4 +1,10 @@
-import Image from "next/image";
+'use client';
+
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+import { Loader2, Sparkles, ArrowRight, Shield, Zap, Users } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
