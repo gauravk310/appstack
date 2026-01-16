@@ -187,7 +187,7 @@ const Dashboard = () => {
                 <div className="flex items-center gap-4 px-4 py-3">
 
                     <div className="flex items-center gap-2">
-                        <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold">
+                        <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg">
                             ▶
                         </div>
                         <span className="font-semibold text-xl hidden sm:block text-black">Google Play</span>
