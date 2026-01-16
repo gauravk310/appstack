@@ -213,8 +213,38 @@ const Dashboard = () => {
                         <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
                             <Settings className="w-6 h-6 text-black" />
                         </button>
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center text-white font-semibold cursor-pointer">
-                            U
+
+                        {/* User Menu */}
+                        <div className="relative">
+                            <button
+                                onClick={() => setShowUserMenu(!showUserMenu)}
+                                className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center text-white font-semibold cursor-pointer hover:opacity-90 transition-opacity"
+                            >
+                                {session?.user?.name?.charAt(0).toUpperCase() || 'U'}
+                            </button>
+
+                            {showUserMenu && (
+                                <div className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50">
+                                    <div className="px-4 py-3 border-b border-gray-100">
+                                        <p className="font-semibold text-gray-900">{session?.user?.name}</p>
+                                        <p className="text-sm text-gray-500">{session?.user?.email}</p>
+                                    </div>
+                                    <button
+                                        onClick={() => router.push('/profile')}
+                                        className="w-full flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:bg-gray-50 transition-colors"
+                                    >
+                                        <User className="w-5 h-5" />
+                                        <span>Profile</span>
+                                    </button>
+                                    <button
+                                        onClick={handleSignOut}
+                                        className="w-full flex items-center gap-3 px-4 py-2.5 text-red-600 hover:bg-red-50 transition-colors"
+                                    >
+                                        <LogOut className="w-5 h-5" />
+                                        <span>Sign out</span>
+                                    </button>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
