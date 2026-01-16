@@ -190,7 +190,7 @@ const Dashboard = () => {
                         <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg">
                             ▶
                         </div>
-                        <span className="font-semibold text-xl hidden sm:block text-black">Google Play</span>
+                        <span className="font-semibold text-xl hidden sm:block text-black">AppStack</span>
                     </div>
 
                     <div className="flex-1 max-w-2xl mx-4">
