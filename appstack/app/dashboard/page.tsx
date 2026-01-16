@@ -163,6 +163,23 @@ const Dashboard = () => {
         )
         : appsData;
 
+    const handleSignOut = async () => {
+        await signOut({ redirect: false });
+        router.push('/login');
+    };
+
+    if (status === 'loading') {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-gray-50">
+                <div className="w-10 h-10 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+        );
+    }
+
+    if (status === 'unauthenticated') {
+        return null;
+    }
+
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Header */}
