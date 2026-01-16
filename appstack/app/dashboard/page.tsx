@@ -346,4 +346,4 @@ const Dashboard = () => {
     );
 };
 
-export default PlayStoreClone;
+export default Dashboard;
