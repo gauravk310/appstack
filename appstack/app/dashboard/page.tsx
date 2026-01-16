@@ -1,7 +1,9 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Search, Bell, Settings, Menu, ChevronLeft, ChevronRight, Star, Download } from 'lucide-react';
+import { Search, Bell, Settings, ChevronLeft, ChevronRight, Star, LogOut, User } from 'lucide-react';
+import { useSession, signOut } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 // Dummy app data
 const appsData = [
