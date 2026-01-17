@@ -31,6 +31,8 @@ export default function Dashboard() {
     useEffect(() => {
         if (status === 'unauthenticated') {
             router.push('/login');
+        } else if (status === 'authenticated') {
+            fetchApps();
         }
     }, [status, router]);
 
