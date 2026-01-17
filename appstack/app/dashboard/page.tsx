@@ -2,7 +2,17 @@
 
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { Plus, X, ExternalLink } from 'lucide-react';
+
+interface App {
+    _id: string;
+    name: string;
+    description: string;
+    logo: string;
+    link: string;
+    category: string;
+}
 
 export default function Dashboard() {
     const { data: session, status } = useSession();
