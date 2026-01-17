@@ -146,14 +146,6 @@ export default function Dashboard() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a
-                                                href={app.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-gray-400 hover:text-purple-600 transition-colors"
-                                            >
-                                                <ExternalLink className="w-5 h-5" />
-                                            </a>
                                         </div>
                                         <h3 className="font-semibold text-gray-900 mb-1">{app.name}</h3>
                                         <p className="text-sm text-gray-500 line-clamp-2">{app.description}</p>
