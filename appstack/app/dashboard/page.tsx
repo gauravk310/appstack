@@ -112,7 +112,7 @@ export default function Dashboard() {
                     {Object.entries(groupedApps).map(([category, categoryApps]) => (
                         <div key={category}>
                             <h2 className="text-xl font-bold text-gray-900 mb-4 capitalize">{category}</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                                 {categoryApps.map((app) => (
                                     <div key={app._id} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                                         <div className="flex items-start justify-between mb-4">
