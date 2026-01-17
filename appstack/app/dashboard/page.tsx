@@ -17,6 +17,16 @@ interface App {
 export default function Dashboard() {
     const { data: session, status } = useSession();
     const router = useRouter();
+    const [apps, setApps] = useState<App[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [showCreateModal, setShowCreateModal] = useState(false);
+    const [formData, setFormData] = useState({
+        name: '',
+        description: '',
+        logo: '',
+        link: '',
+        category: ''
+    });
 
     useEffect(() => {
         if (status === 'unauthenticated') {
