@@ -14,20 +14,6 @@ export default function Dashboard() {
         }
     }, [status, router]);
 
-    const tabs = ['For you', 'Top charts', 'Kids', 'Events'];
-
-    const filteredApps = searchQuery
-        ? appsData.filter(app =>
-            app.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            app.category.toLowerCase().includes(searchQuery.toLowerCase())
-        )
-        : appsData;
-
-    const handleSignOut = async () => {
-        await signOut({ redirect: false });
-        router.push('/login');
-    };
-
     if (status === 'loading') {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-50">
