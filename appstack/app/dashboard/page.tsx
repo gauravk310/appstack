@@ -18,9 +18,7 @@ export default function Dashboard() {
         return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
     }
 
-    if (status === 'unauthenticated') {
-        return null;
-    }
+    if (status === 'unauthenticated') return null;
 
     return (
         <div className="min-h-screen bg-gray-50">
