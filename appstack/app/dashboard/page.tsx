@@ -114,14 +114,37 @@ export default function Dashboard() {
                             <h2 className="text-xl font-bold text-gray-900 mb-4 capitalize">{category}</h2>
                             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                                 {categoryApps.map((app) => (
-                                    <div key={app._id} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                                        <div className="flex items-start justify-between mb-4">
-                                            <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
-                                                {app.logo ? (
-                                                    <img src={app.logo} alt={app.name} className="w-full h-full object-cover" />
-                                                ) : (
-                                                    <span className="text-2xl">📱</span>
-                                                )}
+                                    <a
+                                        key={app._id}
+                                        href={app.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group block"
+                                    >
+                                        <div className="bg-transparent hover:bg-gray-100/50 rounded-xl p-3 transition-colors duration-200 cursor-pointer h-full">
+                                            <div className="flex flex-col items-center md:items-start space-y-3">
+                                                {/* App Icon */}
+                                                <div className="w-28 h-28 md:w-32 md:h-32 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group-hover:shadow-md transition-shadow relative grid place-items-center">
+                                                    {app.logo ? (
+                                                        <img
+                                                            src={app.logo}
+                                                            alt={app.name}
+                                                            className="w-full h-full object-cover"
+                                                        />
+                                                    ) : (
+                                                        <span className="text-4xl">📱</span>
+                                                    )}
+                                                </div>
+
+                                                {/* App Details */}
+                                                <div className="w-full text-center md:text-left">
+                                                    <h3 className="font-semibold text-gray-900 text-sm md:text-base truncate group-hover:text-purple-600 transition-colors">
+                                                        {app.name}
+                                                    </h3>
+                                                    <div className="text-xs text-gray-500 mt-1 space-y-0.5">
+                                                        <p className="truncate">{app.category}</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <a
                                                 href={app.link}
