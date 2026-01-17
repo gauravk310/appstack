@@ -32,6 +32,4 @@ export default function Dashboard() {
             </button>
         </div>
     );
-};
-
-export default Dashboard;
+}
