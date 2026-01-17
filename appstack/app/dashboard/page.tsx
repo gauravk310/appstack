@@ -7,9 +7,6 @@ import { useEffect } from 'react';
 export default function Dashboard() {
     const { data: session, status } = useSession();
     const router = useRouter();
-    const [activeTab, setActiveTab] = useState('For you');
-    const [searchQuery, setSearchQuery] = useState('');
-    const [showUserMenu, setShowUserMenu] = useState(false);
 
     useEffect(() => {
         if (status === 'unauthenticated') {
