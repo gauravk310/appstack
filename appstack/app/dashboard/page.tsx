@@ -147,9 +147,7 @@ export default function Dashboard() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <h3 className="font-semibold text-gray-900 mb-1">{app.name}</h3>
-                                        <p className="text-sm text-gray-500 line-clamp-2">{app.description}</p>
-                                    </div>
+                                    </a>
                                 ))}
                             </div>
                         </div>
