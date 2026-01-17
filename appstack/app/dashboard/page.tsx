@@ -36,7 +36,48 @@ export default function Dashboard() {
         }
     }, [status, router]);
 
-    if (status === 'loading') {
+    const fetchApps = async () => {
+        try {
+            const res = await fetch('/api/apps');
+            const data = await res.json();
+            if (data.success) {
+                setApps(data.data);
+            }
+        } catch (error) {
+            console.error('Failed to fetch apps:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleCreateApp = async (e: React.FormEvent) => {
+        e.preventDefault();
+        try {
+            const res = await fetch('/api/apps', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+            const data = await res.json();
+            if (data.success) {
+                setApps([data.data, ...apps]);
+                setShowCreateModal(false);
+                setFormData({ name: '', description: '', logo: '', link: '', category: '' });
+            }
+        } catch (error) {
+            console.error('Failed to create app:', error);
+        }
+    };
+
+    const groupedApps = apps.reduce((acc, app) => {
+        if (!acc[app.category]) {
+            acc[app.category] = [];
+        }
+        acc[app.category].push(app);
+        return acc;
+    }, {} as Record<string, App[]>);
+
+    if (status === 'loading' || loading) {
         return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
     }
 
