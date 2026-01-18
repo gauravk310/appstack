@@ -31,6 +31,7 @@ export default function Dashboard() {
     const [apps, setApps] = useState<App[]>([]);
     const [loading, setLoading] = useState(true);
     const [showCreateModal, setShowCreateModal] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
     const [formData, setFormData] = useState({
         name: '',
         description: '',
@@ -80,7 +81,13 @@ export default function Dashboard() {
         }
     };
 
-    const groupedApps = apps.reduce((acc, app) => {
+    const filteredApps = apps.filter(app =>
+        app.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        app.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        app.description.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
+    const groupedApps = filteredApps.reduce((acc, app) => {
         if (!acc[app.category]) {
             acc[app.category] = [];
         }
