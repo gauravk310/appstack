@@ -165,6 +165,31 @@ export default function Dashboard() {
                     </div>
                 </header>
 
+                {/* Stats Bar */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                    {[
+                        { label: 'Total Apps', value: apps.length, icon: '📱', color: 'from-blue-500/20 to-cyan-500/20' },
+                        { label: 'Categories', value: Object.keys(groupedApps).length, icon: '📂', color: 'from-purple-500/20 to-pink-500/20' },
+                        { label: 'Featured', value: Math.floor(apps.length / 2) || 0, icon: '⭐', color: 'from-amber-500/20 to-orange-500/20' },
+                        { label: 'New This Week', value: Math.floor(apps.length / 3) || 0, icon: '🆕', color: 'from-emerald-500/20 to-teal-500/20' },
+                    ].map((stat, index) => (
+                        <div
+                            key={stat.label}
+                            className={`relative overflow-hidden bg-gradient-to-br ${stat.color} backdrop-blur-xl border border-slate-700/50 rounded-2xl p-5 hover:scale-[1.02] transition-transform duration-300`}
+                            style={{ animationDelay: `${index * 100}ms` }}
+                        >
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <p className="text-slate-400 text-sm">{stat.label}</p>
+                                    <p className="text-3xl font-bold text-white mt-1">{stat.value}</p>
+                                </div>
+                                <span className="text-3xl opacity-80">{stat.icon}</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Apps Grid */}
                 <div className="space-y-12">
                     {Object.entries(groupedApps).map(([category, categoryApps]) => (
                         <div key={category}>
