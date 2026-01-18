@@ -191,32 +191,61 @@ export default function Dashboard() {
 
                 {/* Apps Grid */}
                 <div className="space-y-12">
-                    {Object.entries(groupedApps).map(([category, categoryApps]) => (
-                        <div key={category}>
-                            <h2 className="text-xl font-bold text-gray-900 mb-4 capitalize">{category}</h2>
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                                {categoryApps.map((app) => (
-                                    <a
-                                        key={app._id}
-                                        href={app.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="group block"
-                                    >
-                                        <div className="bg-transparent hover:bg-gray-100/50 rounded-xl p-3 transition-colors duration-200 cursor-pointer h-full">
-                                            <div className="flex flex-col items-center md:items-start space-y-3">
-                                                {/* App Icon */}
-                                                <div className="w-28 h-28 md:w-32 md:h-32 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group-hover:shadow-md transition-shadow relative grid place-items-center">
-                                                    {app.logo ? (
-                                                        <img
-                                                            src={app.logo}
-                                                            alt={app.name}
-                                                            className="w-full h-full object-cover"
-                                                        />
-                                                    ) : (
-                                                        <span className="text-4xl">📱</span>
-                                                    )}
-                                                </div>
+                    {Object.entries(groupedApps).map(([category, categoryApps]) => {
+                        const style = categoryStyles[category] || { gradient: 'from-slate-500 to-slate-400', icon: '📁' };
+                        return (
+                            <div key={category} className="animate-fadeIn">
+                                {/* Category Header */}
+                                <div className="flex items-center gap-3 mb-6">
+                                    <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${style.gradient} flex items-center justify-center shadow-lg`}>
+                                        <span className="text-lg">{style.icon}</span>
+                                    </div>
+                                    <h2 className="text-xl font-bold text-white capitalize">{category}</h2>
+                                    <span className="px-3 py-1 bg-slate-800/50 rounded-full text-sm text-slate-400">
+                                        {categoryApps.length} {categoryApps.length === 1 ? 'app' : 'apps'}
+                                    </span>
+                                </div>
+
+                                {/* Apps Cards */}
+                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5">
+                                    {categoryApps.map((app, index) => (
+                                        <a
+                                            key={app._id}
+                                            href={app.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="group relative"
+                                            style={{ animationDelay: `${index * 50}ms` }}
+                                        >
+                                            <div className="relative bg-slate-800/40 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:bg-slate-700/40 hover:border-slate-600/50 hover:scale-[1.03] hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full">
+                                                {/* Glow effect on hover */}
+                                                <div className={`absolute inset-0 bg-gradient-to-br ${style.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`}></div>
+
+                                                <div className="relative flex flex-col items-center space-y-4">
+                                                    {/* App Icon */}
+                                                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-slate-900/50 border border-slate-700/50 overflow-hidden shadow-xl group-hover:shadow-2xl group-hover:shadow-purple-500/10 transition-all duration-300">
+                                                        {app.logo ? (
+                                                            <img
+                                                                src={app.logo}
+                                                                alt={app.name}
+                                                                className="w-full h-full object-cover"
+                                                            />
+                                                        ) : (
+                                                            <div className={`w-full h-full bg-gradient-to-br ${style.gradient} flex items-center justify-center`}>
+                                                                <span className="text-4xl">{style.icon}</span>
+                                                            </div>
+                                                        )}
+                                                    </div>
+
+                                                    {/* App Details */}
+                                                    <div className="w-full text-center">
+                                                        <h3 className="font-semibold text-white text-sm md:text-base truncate group-hover:text-purple-300 transition-colors duration-200">
+                                                            {app.name}
+                                                        </h3>
+                                                        <p className="text-xs text-slate-500 mt-1 truncate">
+                                                            {app.description.substring(0, 30)}...
+                                                        </p>
+                                                    </div>
 
                                                 {/* App Details */}
                                                 <div className="w-full text-center md:text-left">
