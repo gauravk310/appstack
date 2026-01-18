@@ -349,28 +349,30 @@ export default function Dashboard() {
                                 </select>
                             </div>
 
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Logo URL</label>
-                                <input
-                                    type="url"
-                                    required
-                                    value={formData.logo}
-                                    onChange={(e) => setFormData({ ...formData, logo: e.target.value })}
-                                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
-                                    placeholder="https://example.com/logo.png"
-                                />
-                            </div>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="space-y-2">
+                                    <label className="block text-sm font-medium text-slate-300">Logo URL</label>
+                                    <input
+                                        type="url"
+                                        required
+                                        value={formData.logo}
+                                        onChange={(e) => setFormData({ ...formData, logo: e.target.value })}
+                                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all duration-300"
+                                        placeholder="https://..."
+                                    />
+                                </div>
 
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">App Link</label>
-                                <input
-                                    type="url"
-                                    required
-                                    value={formData.link}
-                                    onChange={(e) => setFormData({ ...formData, link: e.target.value })}
-                                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
-                                    placeholder="https://example.com"
-                                />
+                                <div className="space-y-2">
+                                    <label className="block text-sm font-medium text-slate-300">App Link</label>
+                                    <input
+                                        type="url"
+                                        required
+                                        value={formData.link}
+                                        onChange={(e) => setFormData({ ...formData, link: e.target.value })}
+                                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all duration-300"
+                                        placeholder="https://..."
+                                    />
+                                </div>
                             </div>
 
                             <div>
