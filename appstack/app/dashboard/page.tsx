@@ -292,13 +292,28 @@ export default function Dashboard() {
 
             {/* Create App Modal */}
             {showCreateModal && (
-                <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-                    <div className="bg-white rounded-2xl w-full max-w-lg overflow-hidden">
-                        <div className="flex justify-between items-center p-6 border-b">
-                            <h2 className="text-xl font-bold">Submit New App</h2>
-                            <button onClick={() => setShowCreateModal(false)} className="text-gray-400 hover:text-gray-600">
-                                <X className="w-6 h-6" />
-                            </button>
+                <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fadeIn">
+                    <div
+                        className="bg-slate-900/95 backdrop-blur-xl border border-slate-700/50 rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl shadow-purple-500/10 animate-slideUp"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Modal Header */}
+                        <div className="relative p-6 border-b border-slate-700/50">
+                            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>
+                            <div className="relative flex justify-between items-center">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                                        <Plus className="w-5 h-5 text-white" />
+                                    </div>
+                                    <h2 className="text-xl font-bold text-white">Submit New App</h2>
+                                </div>
+                                <button
+                                    onClick={() => setShowCreateModal(false)}
+                                    className="w-10 h-10 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-300"
+                                >
+                                    <X className="w-5 h-5" />
+                                </button>
+                            </div>
                         </div>
                         <form onSubmit={handleCreateApp} className="p-6 space-y-4">
                             <div>
