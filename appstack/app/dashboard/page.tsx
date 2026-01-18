@@ -269,7 +269,7 @@ export default function Dashboard() {
                             <p className="text-slate-400 text-lg mb-2">No apps match your search</p>
                             <p className="text-slate-500 text-sm">Try adjusting your search terms</p>
                         </div>
-                    ))}
+                    )}
 
                     {apps.length === 0 && (
                         <div className="text-center py-20 bg-white rounded-2xl border border-dashed border-gray-300">
