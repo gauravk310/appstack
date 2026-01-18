@@ -391,12 +391,36 @@ export default function Dashboard() {
                                 type="submit"
                                 className="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
                             >
-                                Submit App
+                                🚀 Submit App
                             </button>
                         </form>
                     </div>
                 </div>
             )}
+
+            {/* Custom Styles */}
+            <style jsx>{`
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                @keyframes slideUp {
+                    from { 
+                        opacity: 0;
+                        transform: translateY(20px) scale(0.95);
+                    }
+                    to { 
+                        opacity: 1;
+                        transform: translateY(0) scale(1);
+                    }
+                }
+                .animate-fadeIn {
+                    animation: fadeIn 0.3s ease-out forwards;
+                }
+                .animate-slideUp {
+                    animation: slideUp 0.3s ease-out forwards;
+                }
+            `}</style>
         </div>
     );
 }
