@@ -280,7 +280,7 @@ export default function Dashboard() {
                             <p className="text-slate-500 mb-6">Be the first to submit an amazing app!</p>
                             <button
                                 onClick={() => setShowCreateModal(true)}
-                                className="text-purple-600 font-medium hover:text-purple-700"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-medium shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105 transition-all duration-300"
                             >
                                 Submit an App
                             </button>
