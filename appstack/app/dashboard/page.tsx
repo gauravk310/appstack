@@ -336,16 +336,16 @@ export default function Dashboard() {
                                     required
                                     value={formData.category}
                                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none bg-white"
+                                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all duration-300 appearance-none cursor-pointer"
                                 >
-                                    <option value="">Select a category</option>
-                                    <option value="Productivity">Productivity</option>
-                                    <option value="Social">Social</option>
-                                    <option value="Entertainment">Entertainment</option>
-                                    <option value="Utilities">Utilities</option>
-                                    <option value="Health">Health & Fitness</option>
-                                    <option value="Games">Games</option>
-                                    <option value="Education">Education</option>
+                                    <option value="" className="bg-slate-900">Select a category</option>
+                                    <option value="Productivity" className="bg-slate-900">⚡ Productivity</option>
+                                    <option value="Social" className="bg-slate-900">💬 Social</option>
+                                    <option value="Entertainment" className="bg-slate-900">🎬 Entertainment</option>
+                                    <option value="Utilities" className="bg-slate-900">🛠️ Utilities</option>
+                                    <option value="Health" className="bg-slate-900">💪 Health & Fitness</option>
+                                    <option value="Games" className="bg-slate-900">🎮 Games</option>
+                                    <option value="Education" className="bg-slate-900">📚 Education</option>
                                 </select>
                             </div>
 
