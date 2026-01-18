@@ -272,8 +272,12 @@ export default function Dashboard() {
                     )}
 
                     {apps.length === 0 && (
-                        <div className="text-center py-20 bg-white rounded-2xl border border-dashed border-gray-300">
-                            <p className="text-gray-500 mb-4">No apps found. Be the first to submit one!</p>
+                        <div className="text-center py-20 bg-slate-800/30 backdrop-blur-xl rounded-3xl border border-dashed border-slate-700/50">
+                            <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
+                                <Sparkles className="w-12 h-12 text-purple-400" />
+                            </div>
+                            <p className="text-slate-300 text-xl font-medium mb-2">No apps yet</p>
+                            <p className="text-slate-500 mb-6">Be the first to submit an amazing app!</p>
                             <button
                                 onClick={() => setShowCreateModal(true)}
                                 className="text-purple-600 font-medium hover:text-purple-700"
