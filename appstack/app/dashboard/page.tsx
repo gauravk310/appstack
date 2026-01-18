@@ -247,13 +247,9 @@ export default function Dashboard() {
                                                         </p>
                                                     </div>
 
-                                                {/* App Details */}
-                                                <div className="w-full text-center md:text-left">
-                                                    <h3 className="font-semibold text-gray-900 text-sm md:text-base truncate group-hover:text-purple-600 transition-colors">
-                                                        {app.name}
-                                                    </h3>
-                                                    <div className="text-xs text-gray-500 mt-1 space-y-0.5">
-                                                        <p className="truncate">{app.category}</p>
+                                                    {/* External link indicator */}
+                                                    <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                        <ExternalLink className="w-4 h-4 text-purple-400" />
                                                     </div>
                                                 </div>
                                             </div>
