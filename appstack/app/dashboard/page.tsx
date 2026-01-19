@@ -463,6 +463,91 @@ export default function Dashboard() {
                 </div>
             )}
 
+            {/* Settings Modal */}
+            {showSettingsModal && (
+                <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fadeIn">
+                    <div
+                        className="bg-slate-900/95 backdrop-blur-xl border border-slate-700/50 rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl shadow-purple-500/10 animate-slideUp"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Modal Header */}
+                        <div className="relative p-6 border-b border-slate-700/50">
+                            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10"></div>
+                            <div className="relative flex justify-between items-center">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center">
+                                        <Settings className="w-5 h-5 text-white" />
+                                    </div>
+                                    <h2 className="text-xl font-bold text-white">Settings</h2>
+                                </div>
+                                <button
+                                    onClick={() => setShowSettingsModal(false)}
+                                    className="w-10 h-10 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-300"
+                                >
+                                    <X className="w-5 h-5" />
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Modal Content */}
+                        <div className="p-6 space-y-6">
+                            {/* Notification Settings */}
+                            <div className="space-y-4">
+                                <h3 className="text-sm font-medium text-slate-400 uppercase tracking-wider">Notifications</h3>
+                                <div className="space-y-3">
+                                    <label className="flex items-center justify-between p-3 bg-slate-800/30 rounded-xl cursor-pointer hover:bg-slate-800/50 transition-all duration-300">
+                                        <span className="text-white">Email Notifications</span>
+                                        <input type="checkbox" defaultChecked className="w-5 h-5 accent-purple-500 rounded" />
+                                    </label>
+                                    <label className="flex items-center justify-between p-3 bg-slate-800/30 rounded-xl cursor-pointer hover:bg-slate-800/50 transition-all duration-300">
+                                        <span className="text-white">Push Notifications</span>
+                                        <input type="checkbox" className="w-5 h-5 accent-purple-500 rounded" />
+                                    </label>
+                                    <label className="flex items-center justify-between p-3 bg-slate-800/30 rounded-xl cursor-pointer hover:bg-slate-800/50 transition-all duration-300">
+                                        <span className="text-white">App Updates</span>
+                                        <input type="checkbox" defaultChecked className="w-5 h-5 accent-purple-500 rounded" />
+                                    </label>
+                                </div>
+                            </div>
+
+                            {/* Display Settings */}
+                            <div className="space-y-4">
+                                <h3 className="text-sm font-medium text-slate-400 uppercase tracking-wider">Display</h3>
+                                <div className="space-y-3">
+                                    <div className="p-3 bg-slate-800/30 rounded-xl">
+                                        <label className="block text-white mb-2">Theme</label>
+                                        <select className="w-full px-3 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50">
+                                            <option value="dark">Dark Mode</option>
+                                            <option value="light">Light Mode</option>
+                                            <option value="system">System Default</option>
+                                        </select>
+                                    </div>
+                                    <div className="p-3 bg-slate-800/30 rounded-xl">
+                                        <label className="block text-white mb-2">Apps per Row</label>
+                                        <select className="w-full px-3 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50">
+                                            <option value="4">4 Apps</option>
+                                            <option value="5">5 Apps</option>
+                                            <option value="6">6 Apps</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Submit Button */}
+                            <button
+                                onClick={() => {
+                                    // Save settings logic here
+                                    setShowSettingsModal(false);
+                                }}
+                                className="w-full py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-xl font-semibold shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                            >
+                                💾 Save Settings
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
             {/* Custom Styles */}
             <style jsx>{`
                 @keyframes fadeIn {
