@@ -113,7 +113,10 @@ export default function Dashboard() {
 
     if (status === 'loading' || loading) {
         return (
-            <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 flex items-center justify-center">
+            <div className={`min-h-screen flex items-center justify-center ${theme === 'dark'
+                ? 'bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'
+                : 'bg-gradient-to-br from-slate-100 via-white to-slate-100'
+                }`}>
                 <div className="flex flex-col items-center gap-4">
                     <div className="w-16 h-16 border-4 border-purple-500/30 border-t-purple-500 rounded-full animate-spin"></div>
                     <p className="text-slate-400 text-lg font-medium animate-pulse">Loading your apps...</p>
