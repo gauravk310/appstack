@@ -3,7 +3,7 @@
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { Plus, X, ExternalLink, Sparkles, LogOut, Search, Layers } from 'lucide-react';
+import { Plus, X, ExternalLink, Sparkles, LogOut, Search, Layers, Settings } from 'lucide-react';
 
 interface App {
     _id: string;
@@ -32,6 +32,7 @@ export default function Dashboard() {
     const [loading, setLoading] = useState(true);
     const [showCreateModal, setShowCreateModal] = useState(false);
     const [showSignOutModal, setShowSignOutModal] = useState(false);
+    const [showSettingsModal, setShowSettingsModal] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [formData, setFormData] = useState({
         name: '',
