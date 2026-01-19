@@ -270,7 +270,8 @@ export default function Dashboard() {
 
                                                 <div className="relative flex flex-col items-center space-y-4">
                                                     {/* App Icon */}
-                                                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-slate-900/50 border border-slate-700/50 overflow-hidden shadow-xl group-hover:shadow-2xl group-hover:shadow-purple-500/10 transition-all duration-300">
+                                                    <div className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl border overflow-hidden shadow-xl group-hover:shadow-2xl group-hover:shadow-purple-500/10 transition-all duration-300 ${theme === 'dark' ? 'bg-slate-900/50 border-slate-700/50' : 'bg-slate-100 border-slate-300/50'
+                                                        }`}>
                                                         {app.logo ? (
                                                             <img
                                                                 src={app.logo}
@@ -311,11 +312,12 @@ export default function Dashboard() {
                     {/* Empty State */}
                     {filteredApps.length === 0 && apps.length > 0 && (
                         <div className="text-center py-20">
-                            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-slate-800/50 flex items-center justify-center">
-                                <Search className="w-10 h-10 text-slate-600" />
+                            <div className={`w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center ${theme === 'dark' ? 'bg-slate-800/50' : 'bg-slate-200/70'
+                                }`}>
+                                <Search className={`w-10 h-10 ${theme === 'dark' ? 'text-slate-600' : 'text-slate-400'}`} />
                             </div>
-                            <p className="text-slate-400 text-lg mb-2">No apps match your search</p>
-                            <p className="text-slate-500 text-sm">Try adjusting your search terms</p>
+                            <p className={`text-lg mb-2 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>No apps match your search</p>
+                            <p className={`text-sm ${theme === 'dark' ? 'text-slate-500' : 'text-slate-500'}`}>Try adjusting your search terms</p>
                         </div>
                     )}
 
