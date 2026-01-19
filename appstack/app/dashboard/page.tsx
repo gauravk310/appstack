@@ -147,7 +147,10 @@ export default function Dashboard() {
                             <Layers className="w-7 h-7 text-white" />
                         </div>
                         <div>
-                            <h1 className="text-3xl font-bold bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+                            <h1 className={`text-3xl font-bold bg-clip-text text-transparent ${theme === 'dark'
+                                    ? 'bg-gradient-to-r from-white via-slate-200 to-slate-400'
+                                    : 'bg-gradient-to-r from-slate-900 via-slate-700 to-slate-500'
+                                }`}>
                                 AppStack
                             </h1>
                             <p className="text-slate-400 mt-0.5">
