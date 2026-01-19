@@ -162,7 +162,7 @@ export default function Dashboard() {
                     <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
                         {/* Search Bar */}
                         <div className="relative flex-1 md:flex-none md:w-72">
-                            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
+                            <Search className={`absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 ${theme === 'dark' ? 'text-slate-500' : 'text-slate-400'}`} />
                             <input
                                 type="text"
                                 placeholder="Search apps..."
