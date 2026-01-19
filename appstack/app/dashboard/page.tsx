@@ -128,7 +128,10 @@ export default function Dashboard() {
     if (status === 'unauthenticated') return null;
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+        <div className={`min-h-screen relative overflow-hidden transition-colors duration-300 ${theme === 'dark'
+                ? 'bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'
+                : 'bg-gradient-to-br from-slate-100 via-white to-slate-100'
+            }`}>
             {/* Animated background elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
