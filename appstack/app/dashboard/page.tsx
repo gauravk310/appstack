@@ -326,8 +326,8 @@ export default function Dashboard() {
                             <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
                                 <Sparkles className="w-12 h-12 text-purple-400" />
                             </div>
-                            <p className="text-slate-300 text-xl font-medium mb-2">No apps yet</p>
-                            <p className="text-slate-500 mb-6">Be the first to submit an amazing app!</p>
+                            <p className={`text-xl font-medium mb-2 ${theme === 'dark' ? 'text-slate-300' : 'text-slate-700'}`}>No apps yet</p>
+                            <p className={`mb-6 ${theme === 'dark' ? 'text-slate-500' : 'text-slate-500'}`}>Be the first to submit an amazing app!</p>
                             <button
                                 onClick={() => setShowCreateModal(true)}
                                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-medium shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105 transition-all duration-300"
@@ -556,10 +556,13 @@ export default function Dashboard() {
                                 <div className="space-y-3">
                                     <div className="p-3 bg-slate-800/30 rounded-xl">
                                         <label className="block text-white mb-2">Theme</label>
-                                        <select className="w-full px-3 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50">
-                                            <option value="dark">Dark Mode</option>
-                                            <option value="light">Light Mode</option>
-                                            <option value="system">System Default</option>
+                                        <select
+                                            value={theme}
+                                            onChange={(e) => setTheme(e.target.value as 'dark' | 'light')}
+                                            className="w-full px-3 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                                        >
+                                            <option value="dark">🌙 Dark Mode</option>
+                                            <option value="light">☀️ Light Mode</option>
                                         </select>
                                     </div>
                                     <div className="p-3 bg-slate-800/30 rounded-xl">
