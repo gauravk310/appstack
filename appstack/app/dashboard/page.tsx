@@ -158,6 +158,14 @@ export default function Dashboard() {
                         </button>
 
                         <button
+                            onClick={() => setShowSettingsModal(true)}
+                            className="flex items-center gap-2 px-4 py-3 bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 text-slate-300 rounded-xl hover:bg-slate-700/50 hover:text-white hover:border-slate-600 transition-all duration-300"
+                        >
+                            <Settings className="w-5 h-5" />
+                            <span className="hidden sm:inline">Settings</span>
+                        </button>
+
+                        <button
                             onClick={() => setShowSignOutModal(true)}
                             className="flex items-center gap-2 px-4 py-3 bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 text-slate-300 rounded-xl hover:bg-slate-700/50 hover:text-white hover:border-slate-600 transition-all duration-300"
                         >
