@@ -34,6 +34,7 @@ export default function Dashboard() {
     const [showSignOutModal, setShowSignOutModal] = useState(false);
     const [showSettingsModal, setShowSettingsModal] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
+    const [theme, setTheme] = useState<'dark' | 'light'>('dark');
     const [formData, setFormData] = useState({
         name: '',
         description: '',
