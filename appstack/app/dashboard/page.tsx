@@ -219,8 +219,8 @@ export default function Dashboard() {
                         >
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-slate-400 text-sm">{stat.label}</p>
-                                    <p className="text-3xl font-bold text-white mt-1">{stat.value}</p>
+                                    <p className={`text-sm ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>{stat.label}</p>
+                                    <p className={`text-3xl font-bold mt-1 ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{stat.value}</p>
                                 </div>
                                 <span className="text-3xl opacity-80">{stat.icon}</span>
                             </div>
@@ -239,8 +239,9 @@ export default function Dashboard() {
                                     <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${style.gradient} flex items-center justify-center shadow-lg`}>
                                         <span className="text-lg">{style.icon}</span>
                                     </div>
-                                    <h2 className="text-xl font-bold text-white capitalize">{category}</h2>
-                                    <span className="px-3 py-1 bg-slate-800/50 rounded-full text-sm text-slate-400">
+                                    <h2 className={`text-xl font-bold capitalize ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{category}</h2>
+                                    <span className={`px-3 py-1 rounded-full text-sm ${theme === 'dark' ? 'bg-slate-800/50 text-slate-400' : 'bg-slate-200/70 text-slate-600'
+                                        }`}>
                                         {categoryApps.length} {categoryApps.length === 1 ? 'app' : 'apps'}
                                     </span>
                                 </div>
@@ -278,10 +279,11 @@ export default function Dashboard() {
 
                                                     {/* App Details */}
                                                     <div className="w-full text-center">
-                                                        <h3 className="font-semibold text-white text-sm md:text-base truncate group-hover:text-purple-300 transition-colors duration-200">
+                                                        <h3 className={`font-semibold text-sm md:text-base truncate group-hover:text-purple-500 transition-colors duration-200 ${theme === 'dark' ? 'text-white' : 'text-slate-900'
+                                                            }`}>
                                                             {app.name}
                                                         </h3>
-                                                        <p className="text-xs text-slate-500 mt-1 truncate">
+                                                        <p className={`text-xs mt-1 truncate ${theme === 'dark' ? 'text-slate-500' : 'text-slate-500'}`}>
                                                             {app.description.substring(0, 30)}...
                                                         </p>
                                                     </div>
