@@ -399,6 +399,61 @@ export default function Dashboard() {
                 </div>
             )}
 
+            {/* Sign Out Confirmation Modal */}
+            {showSignOutModal && (
+                <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fadeIn">
+                    <div
+                        className="bg-slate-900/95 backdrop-blur-xl border border-slate-700/50 rounded-3xl w-full max-w-md overflow-hidden shadow-2xl shadow-red-500/10 animate-slideUp"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Modal Header */}
+                        <div className="relative p-6 border-b border-slate-700/50">
+                            <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10"></div>
+                            <div className="relative flex justify-between items-center">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center">
+                                        <LogOut className="w-5 h-5 text-white" />
+                                    </div>
+                                    <h2 className="text-xl font-bold text-white">Sign Out</h2>
+                                </div>
+                                <button
+                                    onClick={() => setShowSignOutModal(false)}
+                                    className="w-10 h-10 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-300"
+                                >
+                                    <X className="w-5 h-5" />
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Modal Content */}
+                        <div className="p-6 space-y-6">
+                            <div className="text-center">
+                                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-red-500/20 to-orange-500/20 flex items-center justify-center">
+                                    <LogOut className="w-10 h-10 text-red-400" />
+                                </div>
+                                <p className="text-slate-300 text-lg mb-2">Are you sure you want to sign out?</p>
+                                <p className="text-slate-500 text-sm">You will need to sign in again to access your dashboard.</p>
+                            </div>
+
+                            <div className="flex gap-3">
+                                <button
+                                    onClick={() => setShowSignOutModal(false)}
+                                    className="flex-1 py-3 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-xl font-medium hover:bg-slate-700/50 hover:text-white hover:border-slate-600 transition-all duration-300"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    onClick={() => signOut({ redirect: false }).then(() => router.push('/login'))}
+                                    className="flex-1 py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-xl font-semibold shadow-lg shadow-red-500/25 hover:shadow-red-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                                >
+                                    Sign Out
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
             {/* Custom Styles */}
             <style jsx>{`
                 @keyframes fadeIn {
