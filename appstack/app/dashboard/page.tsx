@@ -31,6 +31,7 @@ export default function Dashboard() {
     const [apps, setApps] = useState<App[]>([]);
     const [loading, setLoading] = useState(true);
     const [showCreateModal, setShowCreateModal] = useState(false);
+    const [showSignOutModal, setShowSignOutModal] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [formData, setFormData] = useState({
         name: '',
@@ -156,7 +157,7 @@ export default function Dashboard() {
                         </button>
 
                         <button
-                            onClick={() => signOut({ redirect: false }).then(() => router.push('/login'))}
+                            onClick={() => setShowSignOutModal(true)}
                             className="flex items-center gap-2 px-4 py-3 bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 text-slate-300 rounded-xl hover:bg-slate-700/50 hover:text-white hover:border-slate-600 transition-all duration-300"
                         >
                             <LogOut className="w-5 h-5" />
