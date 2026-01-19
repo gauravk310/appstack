@@ -129,8 +129,8 @@ export default function Dashboard() {
 
     return (
         <div className={`min-h-screen relative overflow-hidden transition-colors duration-300 ${theme === 'dark'
-                ? 'bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'
-                : 'bg-gradient-to-br from-slate-100 via-white to-slate-100'
+            ? 'bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'
+            : 'bg-gradient-to-br from-slate-100 via-white to-slate-100'
             }`}>
             {/* Animated background elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
