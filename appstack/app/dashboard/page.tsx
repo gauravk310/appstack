@@ -153,8 +153,8 @@ export default function Dashboard() {
                                 }`}>
                                 AppStack
                             </h1>
-                            <p className="text-slate-400 mt-0.5">
-                                Welcome back, <span className="text-purple-400 font-medium">{session?.user?.name || 'User'}</span>
+                            <p className={`mt-0.5 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
+                                Welcome back, <span className="text-purple-500 font-medium">{session?.user?.name || 'User'}</span>
                             </p>
                         </div>
                     </div>
