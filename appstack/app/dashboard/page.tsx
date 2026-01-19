@@ -186,8 +186,8 @@ export default function Dashboard() {
                         <button
                             onClick={() => setShowSettingsModal(true)}
                             className={`flex items-center gap-2 px-4 py-3 backdrop-blur-xl border rounded-xl transition-all duration-300 ${theme === 'dark'
-                                    ? 'bg-slate-800/50 border-slate-700/50 text-slate-300 hover:bg-slate-700/50 hover:text-white hover:border-slate-600'
-                                    : 'bg-white/70 border-slate-300 text-slate-600 hover:bg-slate-100 hover:text-slate-900 hover:border-slate-400'
+                                ? 'bg-slate-800/50 border-slate-700/50 text-slate-300 hover:bg-slate-700/50 hover:text-white hover:border-slate-600'
+                                : 'bg-white/70 border-slate-300 text-slate-600 hover:bg-slate-100 hover:text-slate-900 hover:border-slate-400'
                                 }`}
                         >
                             <Settings className="w-5 h-5" />
@@ -196,7 +196,10 @@ export default function Dashboard() {
 
                         <button
                             onClick={() => setShowSignOutModal(true)}
-                            className="flex items-center gap-2 px-4 py-3 bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 text-slate-300 rounded-xl hover:bg-slate-700/50 hover:text-white hover:border-slate-600 transition-all duration-300"
+                            className={`flex items-center gap-2 px-4 py-3 backdrop-blur-xl border rounded-xl transition-all duration-300 ${theme === 'dark'
+                                ? 'bg-slate-800/50 border-slate-700/50 text-slate-300 hover:bg-slate-700/50 hover:text-white hover:border-slate-600'
+                                : 'bg-white/70 border-slate-300 text-slate-600 hover:bg-slate-100 hover:text-slate-900 hover:border-slate-400'
+                                }`}
                         >
                             <LogOut className="w-5 h-5" />
                             <span className="hidden sm:inline">Sign Out</span>
