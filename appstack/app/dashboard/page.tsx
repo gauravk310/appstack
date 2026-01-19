@@ -43,6 +43,19 @@ export default function Dashboard() {
         category: ''
     });
 
+    // Load theme from localStorage on mount
+    useEffect(() => {
+        const savedTheme = localStorage.getItem('appstack-theme') as 'dark' | 'light' | null;
+        if (savedTheme) {
+            setTheme(savedTheme);
+        }
+    }, []);
+
+    // Save theme to localStorage when it changes
+    useEffect(() => {
+        localStorage.setItem('appstack-theme', theme);
+    }, [theme]);
+
     useEffect(() => {
         if (status === 'unauthenticated') {
             router.push('/login');
