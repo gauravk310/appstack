@@ -286,7 +286,7 @@ export default function Dashboard() {
 
                                                     {/* App Details */}
                                                     <div className="w-full text-center">
-                                                        <h3 className={`font-semibold text-sm md:text-base truncate group-hover:text-purple-500 transition-colors duration-200 ${theme === 'dark' ? 'text-white' : 'text-slate-900'
+                                                        <h3 className={`font-semibold text-sm md:text-base truncate group-hover:text-purple-500 transition-colors duration-200 ${theme === 'dark' ? 'text-white' : 'text-gray-800'
                                                             }`}>
                                                             {app.name}
                                                         </h3>
