@@ -242,8 +242,8 @@ export default function Dashboard() {
                                     <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${style.gradient} flex items-center justify-center shadow-lg`}>
                                         <span className="text-lg">{style.icon}</span>
                                     </div>
-                                    <h2 className={`text-xl font-bold capitalize ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{category}</h2>
-                                    <span className={`px-3 py-1 rounded-full text-sm ${theme === 'dark' ? 'bg-slate-800/50 text-slate-400' : 'bg-slate-200/70 text-slate-600'
+                                    <h2 className={`text-xl font-bold capitalize ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>{category}</h2>
+                                    <span className={`px-3 py-1 rounded-full text-sm ${theme === 'dark' ? 'bg-slate-800/50 text-slate-400' : 'bg-gray-100 text-gray-600'
                                         }`}>
                                         {categoryApps.length} {categoryApps.length === 1 ? 'app' : 'apps'}
                                     </span>
