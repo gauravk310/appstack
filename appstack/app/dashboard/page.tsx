@@ -262,7 +262,7 @@ export default function Dashboard() {
                                         >
                                             <div className={`relative backdrop-blur-xl border rounded-2xl p-4 hover:scale-[1.03] hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full ${theme === 'dark'
                                                 ? 'bg-slate-800/40 border-slate-700/50 hover:bg-slate-700/40 hover:border-slate-600/50'
-                                                : 'bg-white/60 border-slate-300/50 hover:bg-white/80 hover:border-slate-400/50'
+                                                : 'bg-white border-gray-200 hover:bg-gray-50 hover:border-gray-300 shadow-sm hover:shadow-md'
                                                 }`}>
                                                 {/* Glow effect on hover */}
                                                 <div className={`absolute inset-0 bg-gradient-to-br ${style.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`}></div>
