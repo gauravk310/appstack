@@ -133,9 +133,9 @@ export default function Dashboard() {
             }`}>
             {/* Animated background elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className={`absolute -top-40 -right-40 w-96 h-96 rounded-full blur-3xl animate-pulse ${theme === 'dark' ? 'bg-purple-500/10' : 'bg-purple-500/20'}`}></div>
-                <div className={`absolute top-1/2 -left-40 w-80 h-80 rounded-full blur-3xl animate-pulse ${theme === 'dark' ? 'bg-blue-500/10' : 'bg-blue-500/20'}`} style={{ animationDelay: '1s' }}></div>
-                <div className={`absolute bottom-20 right-1/4 w-72 h-72 rounded-full blur-3xl animate-pulse ${theme === 'dark' ? 'bg-pink-500/10' : 'bg-pink-500/20'}`} style={{ animationDelay: '2s' }}></div>
+                <div className={`absolute -top-40 -right-40 w-96 h-96 rounded-full blur-3xl animate-pulse ${theme === 'dark' ? 'bg-purple-500/10' : 'bg-purple-300/20'}`}></div>
+                <div className={`absolute top-1/2 -left-40 w-80 h-80 rounded-full blur-3xl animate-pulse ${theme === 'dark' ? 'bg-blue-500/10' : 'bg-blue-300/20'}`} style={{ animationDelay: '1s' }}></div>
+                <div className={`absolute bottom-20 right-1/4 w-72 h-72 rounded-full blur-3xl animate-pulse ${theme === 'dark' ? 'bg-pink-500/10' : 'bg-pink-300/20'}`} style={{ animationDelay: '2s' }}></div>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
