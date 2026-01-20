@@ -197,7 +197,7 @@ export default function Dashboard() {
                             onClick={() => setShowSignOutModal(true)}
                             className={`flex items-center gap-2 px-4 py-3 backdrop-blur-xl border rounded-xl transition-all duration-300 ${theme === 'dark'
                                 ? 'bg-slate-800/50 border-slate-700/50 text-slate-300 hover:bg-slate-700/50 hover:text-white hover:border-slate-600'
-                                : 'bg-white/70 border-slate-300 text-slate-600 hover:bg-slate-100 hover:text-slate-900 hover:border-slate-400'
+                                : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50 hover:text-gray-800 hover:border-gray-300 shadow-sm'
                                 }`}
                         >
                             <LogOut className="w-5 h-5" />
