@@ -148,7 +148,7 @@ export default function Dashboard() {
                         <div>
                             <h1 className={`text-3xl font-bold bg-clip-text text-transparent ${theme === 'dark'
                                 ? 'bg-gradient-to-r from-white via-slate-200 to-slate-400'
-                                : 'bg-gradient-to-r from-slate-900 via-slate-700 to-slate-500'
+                                : 'bg-gradient-to-r from-gray-800 via-gray-600 to-gray-400'
                                 }`}>
                                 AppStack
                             </h1>
