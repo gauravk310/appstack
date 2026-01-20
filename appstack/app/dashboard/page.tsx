@@ -169,7 +169,7 @@ export default function Dashboard() {
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 className={`w-full pl-12 pr-4 py-3 backdrop-blur-xl border rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all duration-300 ${theme === 'dark'
                                     ? 'bg-slate-800/50 border-slate-700/50 text-white placeholder-slate-500'
-                                    : 'bg-white/70 border-slate-300 text-slate-900 placeholder-slate-400'
+                                    : 'bg-white border-gray-200 text-gray-800 placeholder-gray-400 shadow-sm'
                                     }`}
                             />
                         </div>
