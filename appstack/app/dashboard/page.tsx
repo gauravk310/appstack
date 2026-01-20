@@ -269,7 +269,7 @@ export default function Dashboard() {
 
                                                 <div className="relative flex flex-col items-center space-y-4">
                                                     {/* App Icon */}
-                                                    <div className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl border overflow-hidden shadow-xl group-hover:shadow-2xl group-hover:shadow-purple-500/10 transition-all duration-300 ${theme === 'dark' ? 'bg-slate-900/50 border-slate-700/50' : 'bg-slate-100 border-slate-300/50'
+                                                    <div className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl border overflow-hidden shadow-lg group-hover:shadow-xl group-hover:shadow-purple-500/10 transition-all duration-300 ${theme === 'dark' ? 'bg-slate-900/50 border-slate-700/50' : 'bg-gray-50 border-gray-200'
                                                         }`}>
                                                         {app.logo ? (
                                                             <img
