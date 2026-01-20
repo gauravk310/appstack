@@ -321,7 +321,7 @@ export default function Dashboard() {
                     )}
 
                     {apps.length === 0 && (
-                        <div className={`text-center py-20 backdrop-blur-xl rounded-3xl border border-dashed ${theme === 'dark' ? 'bg-slate-800/30 border-slate-700/50' : 'bg-white/50 border-slate-300/50'
+                        <div className={`text-center py-20 backdrop-blur-xl rounded-3xl border border-dashed ${theme === 'dark' ? 'bg-slate-800/30 border-slate-700/50' : 'bg-white border-gray-200'
                             }`}>
                             <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
                                 <Sparkles className="w-12 h-12 text-purple-400" />
