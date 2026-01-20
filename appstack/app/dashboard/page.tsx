@@ -326,8 +326,8 @@ export default function Dashboard() {
                             <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
                                 <Sparkles className="w-12 h-12 text-purple-400" />
                             </div>
-                            <p className={`text-xl font-medium mb-2 ${theme === 'dark' ? 'text-slate-300' : 'text-slate-700'}`}>No apps yet</p>
-                            <p className={`mb-6 ${theme === 'dark' ? 'text-slate-500' : 'text-slate-500'}`}>Be the first to submit an amazing app!</p>
+                            <p className={`text-xl font-medium mb-2 ${theme === 'dark' ? 'text-slate-300' : 'text-gray-700'}`}>No apps yet</p>
+                            <p className={`mb-6 ${theme === 'dark' ? 'text-slate-500' : 'text-gray-400'}`}>Be the first to submit an amazing app!</p>
                             <button
                                 onClick={() => setShowCreateModal(true)}
                                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-medium shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105 transition-all duration-300"
