@@ -216,7 +216,7 @@ export default function Dashboard() {
                     ].map((stat, index) => (
                         <div
                             key={stat.label}
-                            className={`relative overflow-hidden bg-gradient-to-br ${stat.color} backdrop-blur-xl border rounded-2xl p-5 hover:scale-[1.02] transition-transform duration-300 ${theme === 'dark' ? 'border-slate-700/50' : 'border-slate-300/50'
+                            className={`relative overflow-hidden bg-gradient-to-br ${stat.color} backdrop-blur-xl border rounded-2xl p-5 hover:scale-[1.02] transition-transform duration-300 ${theme === 'dark' ? 'border-slate-700/50' : 'border-gray-200/80 shadow-sm'
                                 }`}
                             style={{ animationDelay: `${index * 100}ms` }}
                         >
