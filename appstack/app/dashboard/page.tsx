@@ -315,8 +315,8 @@ export default function Dashboard() {
                                 }`}>
                                 <Search className={`w-10 h-10 ${theme === 'dark' ? 'text-slate-600' : 'text-gray-400'}`} />
                             </div>
-                            <p className={`text-lg mb-2 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>No apps match your search</p>
-                            <p className={`text-sm ${theme === 'dark' ? 'text-slate-500' : 'text-slate-500'}`}>Try adjusting your search terms</p>
+                            <p className={`text-lg mb-2 ${theme === 'dark' ? 'text-slate-400' : 'text-gray-600'}`}>No apps match your search</p>
+                            <p className={`text-sm ${theme === 'dark' ? 'text-slate-500' : 'text-gray-400'}`}>Try adjusting your search terms</p>
                         </div>
                     )}
 
