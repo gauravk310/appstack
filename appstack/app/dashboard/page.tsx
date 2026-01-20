@@ -311,7 +311,7 @@ export default function Dashboard() {
                     {/* Empty State */}
                     {filteredApps.length === 0 && apps.length > 0 && (
                         <div className="text-center py-20">
-                            <div className={`w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center ${theme === 'dark' ? 'bg-slate-800/50' : 'bg-slate-200/70'
+                            <div className={`w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center ${theme === 'dark' ? 'bg-slate-800/50' : 'bg-gray-100'
                                 }`}>
                                 <Search className={`w-10 h-10 ${theme === 'dark' ? 'text-slate-600' : 'text-slate-400'}`} />
                             </div>
