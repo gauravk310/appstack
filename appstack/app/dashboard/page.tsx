@@ -19,7 +19,6 @@ const categoryStyles: Record<string, { gradient: string; icon: string }> = {
     'Productivity': { gradient: 'from-blue-500 to-cyan-400', icon: '⚡' },
     'Social': { gradient: 'from-pink-500 to-rose-400', icon: '💬' },
     'Entertainment': { gradient: 'from-purple-500 to-indigo-400', icon: '🎬' },
-    'Utilities': { gradient: 'from-emerald-500 to-teal-400', icon: '🛠️' },
     'Health': { gradient: 'from-green-500 to-lime-400', icon: '💪' },
     'Games': { gradient: 'from-orange-500 to-amber-400', icon: '🎮' },
     'Education': { gradient: 'from-violet-500 to-purple-400', icon: '📚' },
