@@ -222,8 +222,8 @@ export default function Dashboard() {
                         >
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className={`text-sm ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>{stat.label}</p>
-                                    <p className={`text-3xl font-bold mt-1 ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{stat.value}</p>
+                                    <p className={`text-sm ${theme === 'dark' ? 'text-slate-400' : 'text-gray-500'}`}>{stat.label}</p>
+                                    <p className={`text-3xl font-bold mt-1 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>{stat.value}</p>
                                 </div>
                                 <span className="text-3xl opacity-80">{stat.icon}</span>
                             </div>
