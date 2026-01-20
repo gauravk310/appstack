@@ -114,7 +114,7 @@ export default function Dashboard() {
         return (
             <div className={`min-h-screen flex items-center justify-center ${theme === 'dark'
                 ? 'bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'
-                : 'bg-gradient-to-br from-slate-100 via-white to-slate-100'
+                : 'bg-gradient-to-br from-gray-50 via-white to-gray-50'
                 }`}>
                 <div className="flex flex-col items-center gap-4">
                     <div className="w-16 h-16 border-4 border-purple-500/30 border-t-purple-500 rounded-full animate-spin"></div>
