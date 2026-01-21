@@ -583,9 +583,12 @@ export default function Dashboard() {
                                             <option value="light">☀️ Light Mode</option>
                                         </select>
                                     </div>
-                                    <div className="p-3 bg-slate-800/30 rounded-xl">
-                                        <label className="block text-white mb-2">Apps per Row</label>
-                                        <select className="w-full px-3 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50">
+                                    <div className={`p-3 rounded-xl ${theme === 'dark' ? 'bg-slate-800/30' : 'bg-gray-50'}`}>
+                                        <label className={`block mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>Apps per Row</label>
+                                        <select className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500/50 ${theme === 'dark'
+                                            ? 'bg-slate-700/50 border-slate-600/50 text-white'
+                                            : 'bg-white border-gray-200 text-gray-700'
+                                            }`}>
                                             <option value="4">4 Apps</option>
                                             <option value="5">5 Apps</option>
                                             <option value="6">6 Apps</option>
