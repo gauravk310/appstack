@@ -539,7 +539,7 @@ export default function Dashboard() {
                         <div className="p-6 space-y-6">
                             {/* Notification Settings */}
                             <div className="space-y-4">
-                                <h3 className="text-sm font-medium text-slate-400 uppercase tracking-wider">Notifications</h3>
+                                <h3 className={`text-sm font-medium uppercase tracking-wider ${theme === 'dark' ? 'text-slate-400' : 'text-gray-500'}`}>Notifications</h3>
                                 <div className="space-y-3">
                                     <label className="flex items-center justify-between p-3 bg-slate-800/30 rounded-xl cursor-pointer hover:bg-slate-800/50 transition-all duration-300">
                                         <span className="text-white">Email Notifications</span>
