@@ -555,8 +555,11 @@ export default function Dashboard() {
                                         <span className={theme === 'dark' ? 'text-white' : 'text-gray-700'}>Push Notifications</span>
                                         <input type="checkbox" className="w-5 h-5 accent-purple-500 rounded" />
                                     </label>
-                                    <label className="flex items-center justify-between p-3 bg-slate-800/30 rounded-xl cursor-pointer hover:bg-slate-800/50 transition-all duration-300">
-                                        <span className="text-white">App Updates</span>
+                                    <label className={`flex items-center justify-between p-3 rounded-xl cursor-pointer transition-all duration-300 ${theme === 'dark'
+                                        ? 'bg-slate-800/30 hover:bg-slate-800/50'
+                                        : 'bg-gray-50 hover:bg-gray-100'
+                                        }`}>
+                                        <span className={theme === 'dark' ? 'text-white' : 'text-gray-700'}>App Updates</span>
                                         <input type="checkbox" defaultChecked className="w-5 h-5 accent-purple-500 rounded" />
                                     </label>
                                 </div>
