@@ -507,7 +507,10 @@ export default function Dashboard() {
             {showSettingsModal && (
                 <div className={`fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fadeIn ${theme === 'dark' ? 'bg-black/60' : 'bg-black/40'}`}>
                     <div
-                        className="bg-slate-900/95 backdrop-blur-xl border border-slate-700/50 rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl shadow-purple-500/10 animate-slideUp"
+                        className={`backdrop-blur-xl border rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl animate-slideUp ${theme === 'dark'
+                            ? 'bg-slate-900/95 border-slate-700/50 shadow-purple-500/10'
+                            : 'bg-white/95 border-gray-200 shadow-purple-500/5'
+                            }`}
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Modal Header */}
