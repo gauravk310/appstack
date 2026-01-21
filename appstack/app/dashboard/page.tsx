@@ -569,8 +569,8 @@ export default function Dashboard() {
                             <div className="space-y-4">
                                 <h3 className={`text-sm font-medium uppercase tracking-wider ${theme === 'dark' ? 'text-slate-400' : 'text-gray-500'}`}>Display</h3>
                                 <div className="space-y-3">
-                                    <div className="p-3 bg-slate-800/30 rounded-xl">
-                                        <label className="block text-white mb-2">Theme</label>
+                                    <div className={`p-3 rounded-xl ${theme === 'dark' ? 'bg-slate-800/30' : 'bg-gray-50'}`}>
+                                        <label className={`block mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>Theme</label>
                                         <select
                                             value={theme}
                                             onChange={(e) => setTheme(e.target.value as 'dark' | 'light')}
