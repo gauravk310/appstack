@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AppStack - Your App Store",
+  title: "AppStack",
   description: "Discover and download apps from AppStack",
 };
 
