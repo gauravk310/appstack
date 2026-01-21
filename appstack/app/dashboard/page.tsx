@@ -521,7 +521,7 @@ export default function Dashboard() {
                                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center">
                                         <Settings className="w-5 h-5 text-white" />
                                     </div>
-                                    <h2 className="text-xl font-bold text-white">Settings</h2>
+                                    <h2 className={`text-xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>Settings</h2>
                                 </div>
                                 <button
                                     onClick={() => setShowSettingsModal(false)}
