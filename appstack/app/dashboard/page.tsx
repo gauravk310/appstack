@@ -514,7 +514,7 @@ export default function Dashboard() {
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Modal Header */}
-                        <div className="relative p-6 border-b border-slate-700/50">
+                        <div className={`relative p-6 border-b ${theme === 'dark' ? 'border-slate-700/50' : 'border-gray-200'}`}>
                             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10"></div>
                             <div className="relative flex justify-between items-center">
                                 <div className="flex items-center gap-3">
