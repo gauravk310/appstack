@@ -574,7 +574,10 @@ export default function Dashboard() {
                                         <select
                                             value={theme}
                                             onChange={(e) => setTheme(e.target.value as 'dark' | 'light')}
-                                            className="w-full px-3 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                                            className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500/50 ${theme === 'dark'
+                                                ? 'bg-slate-700/50 border-slate-600/50 text-white'
+                                                : 'bg-white border-gray-200 text-gray-700'
+                                                }`}
                                         >
                                             <option value="dark">🌙 Dark Mode</option>
                                             <option value="light">☀️ Light Mode</option>
