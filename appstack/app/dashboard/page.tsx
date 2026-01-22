@@ -489,8 +489,8 @@ export default function Dashboard() {
                                     }`}>
                                     <LogOut className={`w-10 h-10 ${theme === 'dark' ? 'text-red-400' : 'text-red-500'}`} />
                                 </div>
-                                <p className="text-slate-300 text-lg mb-2">Are you sure you want to sign out?</p>
-                                <p className="text-slate-500 text-sm">You will need to sign in again to access your dashboard.</p>
+                                <p className={`text-lg mb-2 ${theme === 'dark' ? 'text-slate-300' : 'text-gray-700'}`}>Are you sure you want to sign out?</p>
+                                <p className={`text-sm ${theme === 'dark' ? 'text-slate-500' : 'text-gray-500'}`}>You will need to sign in again to access your dashboard.</p>
                             </div>
 
                             <div className="flex gap-3">
