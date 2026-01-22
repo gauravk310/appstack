@@ -496,7 +496,10 @@ export default function Dashboard() {
                             <div className="flex gap-3">
                                 <button
                                     onClick={() => setShowSignOutModal(false)}
-                                    className="flex-1 py-3 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-xl font-medium hover:bg-slate-700/50 hover:text-white hover:border-slate-600 transition-all duration-300"
+                                    className={`flex-1 py-3 border rounded-xl font-medium transition-all duration-300 ${theme === 'dark'
+                                        ? 'bg-slate-800/50 border-slate-700/50 text-slate-300 hover:bg-slate-700/50 hover:text-white hover:border-slate-600'
+                                        : 'bg-gray-100 border-gray-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800 hover:border-gray-300'
+                                        }`}
                                 >
                                     Cancel
                                 </button>
