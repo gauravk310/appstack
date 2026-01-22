@@ -271,17 +271,11 @@ export default function Dashboard() {
                                                     {/* App Icon */}
                                                     <div className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl border overflow-hidden shadow-lg group-hover:shadow-xl group-hover:shadow-purple-500/10 transition-all duration-300 ${theme === 'dark' ? 'bg-slate-900/50 border-slate-700/50' : 'bg-gray-50 border-gray-200'
                                                         }`}>
-                                                        {app.logo ? (
-                                                            <img
-                                                                src={app.logo}
-                                                                alt={app.name}
-                                                                className="w-full h-full object-cover"
-                                                            />
-                                                        ) : (
-                                                            <div className={`w-full h-full bg-gradient-to-br ${style.gradient} flex items-center justify-center`}>
-                                                                <span className="text-4xl">{style.icon}</span>
-                                                            </div>
-                                                        )}
+                                                        <img
+                                                            src={app.logo || '/default-app-logo.png'}
+                                                            alt={app.name}
+                                                            className="w-full h-full object-cover"
+                                                        />
                                                     </div>
 
                                                     {/* App Details */}
