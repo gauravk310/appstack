@@ -398,7 +398,6 @@ export default function Dashboard() {
                                     <label className="block text-sm font-medium text-slate-300">Logo URL <span className="text-slate-500">(optional)</span></label>
                                     <input
                                         type="url"
-                                        required
                                         value={formData.logo}
                                         onChange={(e) => setFormData({ ...formData, logo: e.target.value })}
                                         className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all duration-300"
