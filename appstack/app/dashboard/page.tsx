@@ -395,7 +395,7 @@ export default function Dashboard() {
 
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-2">
-                                    <label className="block text-sm font-medium text-slate-300">Logo URL</label>
+                                    <label className="block text-sm font-medium text-slate-300">Logo URL <span className="text-slate-500">(optional)</span></label>
                                     <input
                                         type="url"
                                         required
