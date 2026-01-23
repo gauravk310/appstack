@@ -545,9 +545,7 @@ export default function Dashboard() {
                             {/* Notification Settings */}
                             <div className="space-y-4">
                                 <h3 className={`text-sm font-medium uppercase tracking-wider ${theme === 'dark' ? 'text-slate-400' : 'text-gray-500'}`}>Notifications</h3>
-                                <div className="space-y-3">
-                                    
-                                </div>
+                                
                             </div>
 
                             {/* Display Settings */}
