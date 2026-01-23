@@ -563,7 +563,6 @@ export default function Dashboard() {
                                         ? 'bg-slate-800/30 hover:bg-slate-800/50'
                                         : 'bg-gray-50 hover:bg-gray-100'
                                         }`}>
-                                        <span className={theme === 'dark' ? 'text-white' : 'text-gray-700'}>App Updates</span>
                                     </label>
                                 </div>
                             </div>
