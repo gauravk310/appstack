@@ -565,7 +565,6 @@ export default function Dashboard() {
                                         : 'bg-gray-50 hover:bg-gray-100'
                                         }`}>
                                         <span className={theme === 'dark' ? 'text-white' : 'text-gray-700'}>App Updates</span>
-                                        <input type="checkbox" defaultChecked className="w-5 h-5 accent-purple-500 rounded" />
                                     </label>
                                 </div>
                             </div>
